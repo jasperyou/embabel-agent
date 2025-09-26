@@ -601,7 +601,7 @@ pre code a {
 
 /* ===== Light theme and dark theme scrollbar===== */
 
-/* Scrollbar dark theme style (属性选择 todo 向右边贴合)*/
+/* Scrollbar dark theme style (属性选择 todo 向右边贴合) */
 #content {
     scrollbar-width: thin;
     scrollbar-color: #7f8c8d #34495e;
@@ -626,13 +626,36 @@ pre code a {
 }
 
 #toc {
-    /* 隐藏滚动条，但保持滚动功能 */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
 }
 
 #toc::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    width: 8px;
+}
+
+#toc::-webkit-scrollbar-track {
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+#toc::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+#toc:hover {
+    scrollbar-color: #7f8c8d #34495e;
+}
+
+#toc:hover::-webkit-scrollbar-track {
+    background: #34495e;
+}
+
+#toc:hover::-webkit-scrollbar-thumb {
+    background: #7f8c8d;
 }
 
 /* Scrollbar light theme style */
