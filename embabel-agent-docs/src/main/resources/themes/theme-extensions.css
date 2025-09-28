@@ -627,17 +627,7 @@ pre code a {
 
 #toc {
     overflow: auto;
-    scrollbar-width: thin;
     scrollbar-color: transparent transparent;
-}
-
-#toc::-webkit-scrollbar {
-    width: 8px;
-}
-
-#toc::-webkit-scrollbar-track {
-    background: transparent;
-    transition: background 0.3s ease;
 }
 
 #toc::-webkit-scrollbar-thumb {
