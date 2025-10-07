@@ -624,12 +624,11 @@ pre code a {
 }
 
 
-/* ===== Light theme and dark theme scrollbar===== */
+/* ===== Theme scrollbar ===== */
 
-/* Scrollbar dark theme style (属性选择 todo 向右边贴合) */
+/* Scrollbar content theme style */
 #content {
-    scrollbar-width: thin;
-    scrollbar-color: #7f8c8d #34495e;
+    overflow: auto;
 }
 
 #content::-webkit-scrollbar {
@@ -637,7 +636,7 @@ pre code a {
 }
 
 #content::-webkit-scrollbar-track {
-    background: #34495e;
+    background: transparent;
     border-radius: 5px;
 }
 
@@ -650,6 +649,7 @@ pre code a {
     background: #95a5a6;
 }
 
+/* Scrollbar TOC theme style */
 #toc {
     overflow: auto;
     scrollbar-color: transparent transparent;
@@ -671,27 +671,4 @@ pre code a {
 
 #toc:hover::-webkit-scrollbar-thumb {
     background: #7f8c8d;
-}
-
-/* Scrollbar light theme style */
-.light-style::-webkit-scrollbar {
-    width: 6px;
-}
-
-.light-style::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.light-style::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.3);
-    border-radius: 3px;
-}
-
-.light-style::-webkit-scrollbar-thumb:hover {
-    background: rgba(0,0,0,0.5);
-}
-
-.light-style {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0,0,0,0.3) transparent;
 }
